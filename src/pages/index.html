@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <title>Score</title>
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <h1 class="title">- Score -</h1>
+
+    <div class="block">
+        {% for subject in subjects %}
+        <div id="row{{loop.index}}" class="row" onmouseover="loadingEffect(this.id)" onmouseout="myStopFunction(this.id)">
+            <h3>{{subject.name}}</h3>
+            <button onclick="updateFunction(event, 'minus')" class="minus">-</button>
+            <span class="out">
+                <span class="in">{{subject.percentage}}%</span>
+            </span>
+            <button onclick="updateFunction(event, 'plus')" class="plus">+</button>
+        </div>
+        {%endfor%}
+    </div>
+    <form action="/" method="POST">
+        <input type="text" name="name" placeholder="Adicionar Novo" required autocomplete="off">
+        <input type="number" name="percentage" min="0" max="100">
+        <button type="submit">Novo</button>
+    </form>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

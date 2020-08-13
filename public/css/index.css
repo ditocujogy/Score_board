@@ -1,0 +1,131 @@
+body {
+    background-color: #eee;
+    margin-bottom: 100px;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Sriracha', cursive;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.block {
+    margin: 0 0 20px;
+}
+
+.row {
+    color: darkblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 60vw;
+    padding: 3px 4px;
+    border-bottom: 1px solid black;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+}
+
+.row button {
+    border: none;
+}
+
+.row:nth-of-type(1) {
+    border-top: 1px dashed black;
+}
+
+.row:nth-child(odd) {
+    background: #ddd;
+}
+
+.row:nth-child(even) {
+    background: #ccc;
+}
+
+.row:hover {
+    background-color: #cce;
+    color: black;
+    padding: 1px 4px;
+    margin: 2px 0;
+}
+
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 10px 0;
+    width: 200px;
+}
+
+.out {
+    height: 25px;
+    width: 50%;
+    border-radius: 15px;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+
+.minus, .plus {
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 2px 1px 0px 0px rgba(89, 21, 89, 1);
+}
+
+.minus:hover, .plus:hover {
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+    box-shadow: 2px 1px 0px 0px black;
+}
+
+.minus:hover {
+    padding: 3px 9px;
+}
+
+.plus:hover {
+    padding: 3px 7px;
+}
+
+.minus {
+    padding: 4px 10px;
+    background-color: red;
+}
+
+.plus {
+    padding: 4px 8px;
+    background-color: blue;
+}
+
+.in {
+    color: silver;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    background-color: rgb(0,187,18);
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    width: 61vw;
+    background-color: #ccc;
+}
+
+form input,
+form button {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0.4rem 0.5rem;
+    width: 10vw;
+    border-radius: 8px;
+    color: blue;
+}
+
+form button {
+    background-color: green;
+    color: #ddd;
+}
