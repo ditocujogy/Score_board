@@ -58,6 +58,19 @@ async function updateFunction(event, operation) {
     sortElements()
 }
 
+async function deleteFunction(event) {
+    const target = event.target
+    const name = target.parentElement.children[0].innerHTML
+
+    await axios.delete('/', {
+        data: {
+            name
+        }
+    })
+
+    window.location.reload()
+}
+
 const intervals = []
 let isPaused = false
 let i = 0
@@ -72,7 +85,7 @@ const loadingEffect = function (id) {
             i = 0
         } else {
             if (i <= 100) {
-                innerSpan.style.background = 
+                innerSpan.style.background =
                     `linear-gradient(90deg, rgba(0,187,18,1) 0%, rgba(255,255,255,1) ${i}%, rgba(0,190,25,1) 100%)`
             }
         }

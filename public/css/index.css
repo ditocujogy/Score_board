@@ -24,7 +24,7 @@ body {
     justify-content: space-between;
     align-items: center;
     min-width: 60vw;
-    padding: 3px 4px;
+    padding: 3px 6px;
     border-bottom: 1px solid black;
     border-left: 2px solid gray;
     border-right: 2px solid gray;
@@ -49,7 +49,7 @@ body {
 .row:hover {
     background-color: #cce;
     color: black;
-    padding: 1px 4px;
+    padding: 1px 6px;
     margin: 2px 0;
 }
 
@@ -73,20 +73,18 @@ h3 {
     box-shadow: 2px 1px 0px 0px rgba(89, 21, 89, 1);
 }
 
-.minus:hover, .plus:hover {
+.delete {
+    color: red;
+    border-radius: 5px;
+    box-shadow: 2px 1px 0px 0px rgba(89, 21, 89, 1);
+}
+
+.minus:hover, .plus:hover, .delete:hover {
     background-color: #fff;
     color: black;
     cursor: pointer;
     border: 1px solid black;
     box-shadow: 2px 1px 0px 0px black;
-}
-
-.minus:hover {
-    padding: 3px 9px;
-}
-
-.plus:hover {
-    padding: 3px 7px;
 }
 
 .minus {
@@ -97,6 +95,18 @@ h3 {
 .plus {
     padding: 4px 8px;
     background-color: blue;
+}
+
+.minus:hover {
+    padding: 3px 9px;
+}
+
+.plus:hover {
+    padding: 3px 7px;
+}
+
+.delete:hover {
+    padding: 1px 5px;
 }
 
 .in {
